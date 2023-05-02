@@ -10,6 +10,10 @@
   font-size: x-large;
 }
 
+.card {
+  padding: 7px;
+}
+
 #profileList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

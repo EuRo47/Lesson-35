@@ -18,7 +18,7 @@ async function getUsers (){
         userData.forEach(Object=> {
             const card = createProfileCards(Object);
             profileList.appendChild(card);
-            cardPostLink.addEventListener("click", getPosts(Object));
+            
              });
              console.log(userData)
         return userData;
@@ -33,6 +33,8 @@ async function getUsers (){
    
 }
 getUsers();
+
+
 
 //ПОСТИ
 async function getPosts (userData){
@@ -73,8 +75,8 @@ function createProfileCards (userData) {
     const cardName = document.createElement("h4");
     const cardPostLink = document.createElement("a");
     cardPostLink.href= "./post-page.html";
-    let wawa = userData.id
-    console.log(wawa);
+    cardPostLink.setAttribute("id", `${userData.id}`)
+
     cardPostLink.addEventListener("click", showPost);
     
     if(userData.gender === "female"){
