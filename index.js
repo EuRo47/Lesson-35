@@ -74,7 +74,10 @@ function createProfileCards (userData) {
     //cтворення імені-профіля для картки
     const cardName = document.createElement("h4");
     const cardPostLink = document.createElement("a");
-    cardPostLink.href= "./post-page.html";
+    
+    //ООООООООООСЬ ТУУУУУУУУУУУТ, ЗАВДЯКИ ЛІНКУ МОЖНА БУДЕ ПРАЦЮВАТИ З ДАНИМИ
+
+    cardPostLink.href= `./post-page.html?user=${userData.id}`;
     cardPostLink.setAttribute("id", `${userData.id}`)
 
     cardPostLink.addEventListener("click", showPost);
